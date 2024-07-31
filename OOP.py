@@ -7,10 +7,12 @@ class Flight():
     def print_passengers(self):
         print(f"The current Passengers are {self.passengers}")
     
+    def open_seats(self):
+        return self.capacity - len(self.passengers)
     
     def add_passenger(self, name):
-        # Check length of passengers
-        if (len(self.passengers) >= self.capacity):
+        # Check length of passengers using the open_seats method
+        if not self.open_seats():
             print(f"Flight capacity filled. No More Passengers can be added.")
             
         else:
