@@ -5,7 +5,7 @@ class Flight():
         self.passengers = []
     
     def print_passengers(self):
-        print(f"The current Passengers are {self.passengers}")
+        print(f"The current Passengers are: {self.passengers}")
     
     def open_seats(self):
         return self.capacity - len(self.passengers)
@@ -17,6 +17,7 @@ class Flight():
             
         else:
             self.passengers.append(name)
+            print(f"{name} successfully added to passenger list!")
             self.print_passengers()
 
     def remove_passenger(self, name):
@@ -24,7 +25,7 @@ class Flight():
         passenger_present = name in self.passengers  # This returns a Boolean value
         if (passenger_present):
             self.passengers.remove(name)
-            print(f"{name} has been removed from the passenger list")
+            print(f"{name} has been removed from the passenger list.")
             self.print_passengers()
         else:
             print(f"{name} is not in the passenger list")
