@@ -10,3 +10,4 @@ def announce(f):
         # Execute the function
         f()
         print("Done with the function")
+        return wrapper
