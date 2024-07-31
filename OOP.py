@@ -30,6 +30,7 @@ class Flight():
 
 
 flight09 = Flight(4)
+# Testing the Flight class
 flight09.add_passenger("John")
 flight09.add_passenger("Jake")
 flight09.remove_passenger("Carla")
